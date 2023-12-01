@@ -12,7 +12,7 @@ And the second on was this text message
 So i assumed that this text was the encrypted message used by the function above;
 First of all i need to understand what does the python code do, so i can decrypt the message for the flag
 
-![Image Description](/ctf0.png)
+![Image Description](/ctf3.png)
 
 In the beggining the code 
 - <b> takes a message ( In this case our flag ) <b> 
@@ -53,11 +53,15 @@ so i started by listing the elements from the last element to the first
 ![Image Description](/ctf7.png)
 
 What you should know is that the text was encrypted in hexadecimal, with two letters, for example if we do 156 in decimal is 16 * 9 + 12, wish means 9c in hexadeciaml,
-so i will need to take 2 elements every time, so this i what i came up with
+so i will need to take 2 elements every time ( 9c for example ) and make it into an int, so this is what i came up with
 
 ![Image Description](/ctf8.png)
 
+i take two caracteres every time and will make into and integer and then cast them into a caractere and append them to list
 
+![Image Description](/ctf9.png)
+
+At the end, i added this function line of code to reverse the message and put it out as a string and this is what i got when i used the text message in the code.
 
 ![Image Description](/ctfresultat.png)
 
